@@ -1,0 +1,15 @@
+.custom-img {
+    width: 150px;
+    height: 100px;
+  }
+  .img-fluid{
+    width: 300px;
+    height: 250px;
+  }
+  p{
+    font-family: "Petit Formal Script", serif !important;
+    font-weight: bold;
+  }
+  h2{
+    font-family: 'Dancing Script', 'Imperial Script', 'Kalnia Glaze', sans-serif !important;
+  }

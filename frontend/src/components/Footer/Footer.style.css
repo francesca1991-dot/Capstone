@@ -1,0 +1,15 @@
+.Footer{
+    margin-top:300px;
+    background-color: rgb(35, 63, 35);
+    height: 100%;
+    color: white;
+}
+.form-color{
+    background-color: rgb(225, 225, 156) !important;
+}
+
+.form-control:focus {
+    border-color: rgb(0, 0, 0) !important;
+    box-shadow: 0 0 20px rgba(23, 171, 23, 0.7) !important; 
+    outline: none !important; 
+}

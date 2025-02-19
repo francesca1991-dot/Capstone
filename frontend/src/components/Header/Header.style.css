@@ -1,0 +1,26 @@
+html, body {
+      overflow-x: hidden;
+    }
+.nav-link {
+    color: #333 !important ;
+    font-size: 30px !important;
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  }
+  
+  .nav-link:hover {
+    color:  #044412 !important;
+  }
+   
+  .navbar{
+    margin-bottom: 50px;
+  }
+
+  img.logo{
+      opacity: 0.5 !important; 
+      transform: rotate(20deg); 
+      border-radius: 100px !important;
+    }
+    
+    
+    
+  
