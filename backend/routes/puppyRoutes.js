@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/", getAllPuppies); 
 router.get("/:id", getPuppyId); 
 router.post('/create-checkout-session', protect, createCheckoutSession); 
-router.post('/updateAvailability', updateAvailability); 
+router.patch('/updateAvailability', updateAvailability); 
 
 
 export { router };

@@ -8,8 +8,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 
 
-
-//ottengo tutti i cuccioli
 const getAllPuppies = async (req, res) => {
     try {
         const allPuppies = await Puppy.find({});
@@ -20,7 +18,6 @@ const getAllPuppies = async (req, res) => {
     }
 };
 
-//verifico se ottengo il mio db sulla backend
 const testFetchPuppies = async () => {
     try {
         const allPuppies = await Puppy.find({});
@@ -32,7 +29,6 @@ const testFetchPuppies = async () => {
 testFetchPuppies();
 
 
-//ottengo il singolo cucciolo
 const getPuppyId = async (req, res) => {
     try {
         const puppy = await Puppy.findById(req.params.id);
@@ -46,7 +42,6 @@ const getPuppyId = async (req, res) => {
 };
 
 
-//creo la sessione in uscita se il cucciolo non è disponibile, altrimenti aggiungo un sistema di pagamento 
 const createCheckoutSession = async (req, res) => {
     const { puppyId } = req.body;
     const puppy = await Puppy.findById(puppyId);
@@ -63,7 +58,7 @@ const createCheckoutSession = async (req, res) => {
             product_data: {
               name: puppy.name,
             },
-            unit_amount: 1000,
+            unit_amount: puppy.price * 100,
           },
           quantity: 1,
         },
