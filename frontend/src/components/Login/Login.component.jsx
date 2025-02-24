@@ -17,6 +17,7 @@ function Login() {
       .then(data => {
         if (data.token) {
           localStorage.setItem('token', data.token);
+          alert("Login effettuato con successo, vai alle nostre cucciolate!");
           navigate('/');
         } else {
           alert(data.message);
